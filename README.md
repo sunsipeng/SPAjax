@@ -1,7 +1,7 @@
 # SPAjax
 AJAX封装
 
-使用方式
+使用方式：
 
  SP.ajax({
  
