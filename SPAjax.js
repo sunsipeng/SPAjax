@@ -20,8 +20,8 @@ var SP = function(){
 				console.log( "xhr请求失败："+xhr.status );
 				request.error(xhr.status);
 			   }
-			   break;
-		 	      default :
+			        break;
+		 	   default :
 				break;
 		   }
 		}
