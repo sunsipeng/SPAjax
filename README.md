@@ -29,6 +29,7 @@ AJAX封装
  
 若需要将data传入为数组，现仅只支持name字段和value字段
 例如：
+
 data: [
   {name:'name1',value:'value1'},
   {name:'name2',value:'value2'},
