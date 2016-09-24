@@ -31,6 +31,7 @@ AJAX封装
 例如：
 
 data: [
+
   {name:'name1',value:'value1'},
   {name:'name2',value:'value2'},
   {name:'name3',value:'value3'}
