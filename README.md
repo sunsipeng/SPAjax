@@ -3,6 +3,7 @@ AJAX封装
 
 使用方式
  
+
 SP.ajax({
 	url:'http://127.0.0.1:3000/reactTest1',
 	
@@ -21,6 +22,7 @@ SP.ajax({
 	    console.log(status);
 	}
 });
+
 
 
  使用方式跟jquery的ajax是一样的，只不过讲$换成SP即可
