@@ -3,8 +3,10 @@ AJAX封装
 
 使用方式
  
- SP.ajax({
  
+ 
+ 
+ SP.ajax({
 	url:'http://127.0.0.1:3000/reactTest1',
 	mothod:'post',
 	async:true,
@@ -20,8 +22,9 @@ AJAX封装
 	    console.log("请求失败。。");
 	    console.log(status);
 	}
-	
  });
+
+
 
 
 
