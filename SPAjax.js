@@ -9,21 +9,21 @@ var SP = function(){
 		xhr = new XMLHttpRequest();
 		var self = this;
 		xhr.onreadystatechange = function () {
-			switch ( xhr.readyState ) {
-				case 4:
-					if ( xhr.status == 200 ) {
-						var $xhr = eval("("+xhr.responseText+")");
-						//请求成功回调函数
-						request.success($xhr);
-					} else {
-						//请求失败回调函数
-						console.log( "xhr请求失败："+xhr.status );
-						request.error(xhr.status);
-					}
-					break;
-				default :
-					break;
-			}
+		   switch ( xhr.readyState ) {
+			case 4:
+			   if ( xhr.status == 200 ) {
+				var $xhr = eval("("+xhr.responseText+")");
+				//请求成功回调函数
+				request.success($xhr);
+		  	   } else {
+				//请求失败回调函数
+				console.log( "xhr请求失败："+xhr.status );
+				request.error(xhr.status);
+			   }
+			   break;
+		 	      default :
+				break;
+		   }
 		}
 		//判断请求方式
 		var mothod = request.mothod.toUpperCase();
