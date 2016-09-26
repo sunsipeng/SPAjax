@@ -6,7 +6,7 @@ AJAX封装
  SP.ajax({
  
 	url:'http://127.0.0.1:3000/reactTest1',
-	mothod:'post',
+	type:'post',
 	async:true,
 	data:{
 	   uname:'sipeng',
