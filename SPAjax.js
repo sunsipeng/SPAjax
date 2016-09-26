@@ -26,14 +26,14 @@ var SP = function(){
 		   }
 		}
 		//判断请求方式
-		var mothod = request.mothod.toUpperCase();
-		if(mothod == 'GET'){
+		var type = request.type.toUpperCase();
+		if(type == 'GET'){
 			console.log("get");
-			xhr.open( request.mothod, request.url + '?' + self.serialize(request.data) ,request.async);
+			xhr.open( request.type, request.url + '?' + self.serialize(request.data) ,request.async);
 			xhr.send();
-		}else if(mothod == 'POST'){
+		}else if(type == 'POST'){
 			console.log("post");
-			xhr.open( request.mothod, request.url + '?' ,request.async);
+			xhr.open( request.type, request.url + '?' ,request.async);
 			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
 			xhr.send(self.serialize( request.data ));
 		}
