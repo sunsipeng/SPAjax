@@ -3,6 +3,7 @@ AJAX封装
 
 使用方式：
 
+Example
  SP.ajax({
  
 	url:'http://127.0.0.1:3000/reactTest1',
