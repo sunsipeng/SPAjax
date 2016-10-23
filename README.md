@@ -3,7 +3,7 @@ AJAX封装
 
 使用方式：
 
-Example
+Example：
 
  SP.ajax({
  
