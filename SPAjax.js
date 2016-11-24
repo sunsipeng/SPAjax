@@ -17,10 +17,9 @@ var SP = function(){
 				request.success($xhr);
 		  	   } else {
 				//请求失败回调函数
-				console.log( "xhr请求失败："+xhr.status );
 				request.error(xhr.status);
 			   }
-			        break;
+			    break;
 		 	   default :
 				break;
 		   }
@@ -28,11 +27,9 @@ var SP = function(){
 		//判断请求方式
 		var type = request.type.toUpperCase();
 		if(type == 'GET'){
-			console.log("get");
 			xhr.open( request.type, request.url + '?' + self.serialize(request.data) ,request.async);
 			xhr.send();
 		}else if(type == 'POST'){
-			console.log("post");
 			xhr.open( request.type, request.url + '?' ,request.async);
 			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
 			xhr.send(self.serialize( request.data ));
@@ -42,16 +39,18 @@ var SP = function(){
 	//序列化参数
 	this.serialize = function(data){
 		var serArr = [];
-		if( data.consttructor == Array ){
-			for(var i = 0; i< data.length; i++){
-				serArr.push( data[i].name + '=' + encodeURIComponent( data[j].value ) );
+		if( data ){
+			if( data.consttructor == Array ){
+				for(var i = 0; i< data.length; i++){
+					serArr.push( data[i].name + '=' + encodeURIComponent( data[j].value ) );
+				}
+			}else{
+				for(var d in data){
+					serArr.push( d + '=' + encodeURIComponent( data[d] ) );
+				}
 			}
-		}else{
-			for(var d in data){
-				serArr.push( d + '=' + encodeURIComponent( data[d] ) );
-			}
+			return serArr.join("&");
 		}
-		return serArr.join("&");
 	}
 }
 
