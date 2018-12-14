@@ -4,6 +4,7 @@ AJAX封装
 使用方式：
 
 Example：
+```javascript
 
  SP.ajax({
  
@@ -25,7 +26,7 @@ Example：
 	
  });
 
-
+```
 
 
 
